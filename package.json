@@ -5,11 +5,18 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && echo 2019.jsconf.am > ./dist/CNAME  && gh-pages -d dist --repo git@github.com:JSConfArmenia/conf-19.git --branch gh-pages",
+    "deployMain": "npm run build && echo jsconf.am > ./dist/CNAME  && gh-pages -d dist --repo git@github.com:JSConfArmenia/conf-19.git --branch gh-pages"
   },
   "dependencies": {
+    "buefy": "^0.8.3",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "vue": "^2.6.10",
+    "vue-smooth-scroll": "^1.0.13",
+    "vue2-scrollspy": "^2.3.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
@@ -20,6 +27,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
+    "gh-pages": "^2.1.1",
     "prettier": "^1.18.2",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
